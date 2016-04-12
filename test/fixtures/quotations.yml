@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  client_name: MyString
+  client_email: MyString
+  client_phone_number: MyString
+  project_name: MyString
+  website_url_to_develop: MyString
+  business_name: MyString
+  about_client_or_about_the_business: MyText
+  website_platform: MyString
+  user_name: MyString
+  password: MyString
+  logo: MyString
+  website_color_scheme: MyString
+  overall_ideas_for_the_project: MyText
+  reference_websites_images_or_function: MyText
+  special_functions: MyText
+  list_of_pages: MyText
+
+two:
+  user_id: 
+  client_name: MyString
+  client_email: MyString
+  client_phone_number: MyString
+  project_name: MyString
+  website_url_to_develop: MyString
+  business_name: MyString
+  about_client_or_about_the_business: MyText
+  website_platform: MyString
+  user_name: MyString
+  password: MyString
+  logo: MyString
+  website_color_scheme: MyString
+  overall_ideas_for_the_project: MyText
+  reference_websites_images_or_function: MyText
+  special_functions: MyText
+  list_of_pages: MyText
