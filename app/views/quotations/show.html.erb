@@ -1,89 +1,54 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Quotation -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Quotation %></h1>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @quotation.user %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:client_name) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.client_name %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:client_email) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.client_email %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:client_phone_number) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.client_phone_number %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:project_name) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.project_name %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:website_url_to_develop) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.website_url_to_develop %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:business_name) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.business_name %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:about_client_or_about_the_business) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.about_client_or_about_the_business %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:website_platform) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.website_platform %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:user_name) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.user_name %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:password) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.password %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:logo) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.logo %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:website_color_scheme) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.website_color_scheme %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:overall_ideas_for_the_project) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.overall_ideas_for_the_project %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:reference_websites_images_or_function) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.reference_websites_images_or_function %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:special_functions) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.special_functions %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:list_of_pages) %></dt>
+      <dd><pre class="prettyprint"><%= @quotation.list_of_pages %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Client name:</strong>
-  <%= @quotation.client_name %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              quotations_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_quotation_path(@quotation), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              quotation_path(@quotation),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Client email:</strong>
-  <%= @quotation.client_email %>
-</p>
-
-<p>
-  <strong>Client phone number:</strong>
-  <%= @quotation.client_phone_number %>
-</p>
-
-<p>
-  <strong>Project name:</strong>
-  <%= @quotation.project_name %>
-</p>
-
-<p>
-  <strong>Website url to develop:</strong>
-  <%= @quotation.website_url_to_develop %>
-</p>
-
-<p>
-  <strong>Business name:</strong>
-  <%= @quotation.business_name %>
-</p>
-
-<p>
-  <strong>About client or about the business:</strong>
-  <%= @quotation.about_client_or_about_the_business %>
-</p>
-
-<p>
-  <strong>Website platform:</strong>
-  <%= @quotation.website_platform %>
-</p>
-
-<p>
-  <strong>User name:</strong>
-  <%= @quotation.user_name %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @quotation.password %>
-</p>
-
-<p>
-  <strong>Logo:</strong>
-  <%= @quotation.logo %>
-</p>
-
-<p>
-  <strong>Website color scheme:</strong>
-  <%= @quotation.website_color_scheme %>
-</p>
-
-<p>
-  <strong>Overall ideas for the project:</strong>
-  <%= @quotation.overall_ideas_for_the_project %>
-</p>
-
-<p>
-  <strong>Reference websites images or function:</strong>
-  <%= @quotation.reference_websites_images_or_function %>
-</p>
-
-<p>
-  <strong>Special functions:</strong>
-  <%= @quotation.special_functions %>
-</p>
-
-<p>
-  <strong>List of pages:</strong>
-  <%= @quotation.list_of_pages %>
-</p>
-
-<%= link_to 'Edit', edit_quotation_path(@quotation) %> |
-<%= link_to 'Back', quotations_path %>

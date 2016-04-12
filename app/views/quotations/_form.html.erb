@@ -1,27 +1,106 @@
-<%= simple_form_for(@quotation) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.association :user %>
-    <%= f.input :client_name %>
-    <%= f.input :client_email %>
-    <%= f.input :client_phone_number %>
-    <%= f.input :project_name %>
-    <%= f.input :website_url_to_develop %>
-    <%= f.input :business_name %>
-    <%= f.input :about_client_or_about_the_business %>
-    <%= f.input :website_platform %>
-    <%= f.input :user_name %>
-    <%= f.input :password %>
-    <%= f.input :logo %>
-    <%= f.input :website_color_scheme %>
-    <%= f.input :overall_ideas_for_the_project %>
-    <%= f.input :reference_websites_images_or_function %>
-    <%= f.input :special_functions %>
-    <%= f.input :list_of_pages %>
+<%= form_for @quotation, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :client_name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :client_name, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :client_email, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :client_email, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :client_phone_number, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :client_phone_number, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :project_name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :project_name, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :website_url_to_develop, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :website_url_to_develop, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :business_name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :business_name, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :about_client_or_about_the_business, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :about_client_or_about_the_business, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :website_platform, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :website_platform, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :user_name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :user_name, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :password, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :password, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :logo, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :logo, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :website_color_scheme, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :website_color_scheme, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :overall_ideas_for_the_project, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :overall_ideas_for_the_project, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :reference_websites_images_or_function, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :reference_websites_images_or_function, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :special_functions, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :special_functions, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :list_of_pages, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :list_of_pages, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  quotations_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
