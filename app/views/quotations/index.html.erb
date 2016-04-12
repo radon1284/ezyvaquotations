@@ -1,0 +1,57 @@
+<h1>Listing quotations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Client name</th>
+      <th>Client email</th>
+      <th>Client phone number</th>
+      <th>Project name</th>
+      <th>Website url to develop</th>
+      <th>Business name</th>
+      <th>About client or about the business</th>
+      <th>Website platform</th>
+      <th>User name</th>
+      <th>Password</th>
+      <th>Logo</th>
+      <th>Website color scheme</th>
+      <th>Overall ideas for the project</th>
+      <th>Reference websites images or function</th>
+      <th>Special functions</th>
+      <th>List of pages</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quotations.each do |quotation| %>
+      <tr>
+        <td><%= quotation.user %></td>
+        <td><%= quotation.client_name %></td>
+        <td><%= quotation.client_email %></td>
+        <td><%= quotation.client_phone_number %></td>
+        <td><%= quotation.project_name %></td>
+        <td><%= quotation.website_url_to_develop %></td>
+        <td><%= quotation.business_name %></td>
+        <td><%= quotation.about_client_or_about_the_business %></td>
+        <td><%= quotation.website_platform %></td>
+        <td><%= quotation.user_name %></td>
+        <td><%= quotation.password %></td>
+        <td><%= quotation.logo %></td>
+        <td><%= quotation.website_color_scheme %></td>
+        <td><%= quotation.overall_ideas_for_the_project %></td>
+        <td><%= quotation.reference_websites_images_or_function %></td>
+        <td><%= quotation.special_functions %></td>
+        <td><%= quotation.list_of_pages %></td>
+        <td><%= link_to 'Show', quotation %></td>
+        <td><%= link_to 'Edit', edit_quotation_path(quotation) %></td>
+        <td><%= link_to 'Destroy', quotation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quotation', new_quotation_path %>

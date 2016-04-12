@@ -1,0 +1,27 @@
+<%= simple_form_for(@quotation) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :user %>
+    <%= f.input :client_name %>
+    <%= f.input :client_email %>
+    <%= f.input :client_phone_number %>
+    <%= f.input :project_name %>
+    <%= f.input :website_url_to_develop %>
+    <%= f.input :business_name %>
+    <%= f.input :about_client_or_about_the_business %>
+    <%= f.input :website_platform %>
+    <%= f.input :user_name %>
+    <%= f.input :password %>
+    <%= f.input :logo %>
+    <%= f.input :website_color_scheme %>
+    <%= f.input :overall_ideas_for_the_project %>
+    <%= f.input :reference_websites_images_or_function %>
+    <%= f.input :special_functions %>
+    <%= f.input :list_of_pages %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
